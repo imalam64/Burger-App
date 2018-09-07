@@ -1,0 +1,11 @@
+{
+  "name": "burgerapp",
+  "version": "1.0.0",
+  "description": "App with Node Express Handlebars",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Iqbal Malma",
+  "license": "MIT"
+}
