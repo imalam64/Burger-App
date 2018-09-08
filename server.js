@@ -1,9 +1,9 @@
-var express = require("express");
-var bodyParser = require("body-parser");
+const express = require("express");
+const bodyParser = require("body-parser");
 
-var PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8080;
 
-var app = express();
+const app = express();
 
 app.use(express.static("public"));
 
@@ -11,12 +11,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(bodyParser.json());
 
-var exphbs = require("express-handlebars");
+const exphbs = require("express-handlebars");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-var routes = require("./controllers/burger_controllers.js");
+const routes = require("./controllers/burger_controllers");
 
 app.use(routes);
 
