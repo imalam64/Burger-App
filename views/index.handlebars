@@ -1,5 +1,5 @@
 <div class="jumbotron mb-3">
-    <img src="../public/assets/img/4-drib-cindysuen-transparent-pikachu-burger.gif">
+    <img src="/assets/img/4-drib-cindysuen-transparent-pikachu-burger.gif">
 </div>
 
 <div class="container mb-3">
@@ -7,7 +7,7 @@
         <div class="col-md-6 border">
         <h3> Burgers that are ready to be munched on! </h3>
             <ul>
-                {{#each burger}}
+                {{#each burgers}}
                 {{#unless devoured}}
                     <li>
                         {{burger_name}}
@@ -23,7 +23,7 @@
         <div class="col-md-6 border">
         <h3> Burgers that are completely devoured! </h3>
             <ul>
-                {{#each burger}}
+                {{#each burgers}}
                     {{#if devoured}}
                         <li>
                             {{burger_name}}
