@@ -11,9 +11,11 @@
                 {{#unless devoured}}
                     <li>
                         {{burger_name}}
+                        <form method="PUT" action="/api/burgers/:id">
                         <button class="change-devour" data-id="{{id}}" data-devour="{{devoured}}">
                             CHOMP CHOMP
                         </button>
+					    </form>
                     </li>
                 {{/unless}}
                 {{/each}}
@@ -39,7 +41,7 @@
 <div class="container border">
     <div>
         <h3> Add a Burger Here! </h3>
-        <form class="create-form">
+        <form action="/api/burgers" method="POST" class="create-form">
 
         <div class="form-group">
             <label for="burg">Burger Name:</label>
