@@ -11,8 +11,8 @@
                 {{#unless devoured}}
                     <li>
                         {{burger_name}}
-                        <form method="PUT" action="/api/burgers/:id">
-                        <button class="change-devour" data-id="{{id}}" data-devour="{{devoured}}">
+                        <form action="/api/burgers/{{id}}?_method=PUT" method="POST" >
+                        <button type="submit" data-id="{{id}}" data-devour="{{devoured}}">
                             CHOMP CHOMP
                         </button>
 					    </form>
